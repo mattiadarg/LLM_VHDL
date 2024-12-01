@@ -1,0 +1,1 @@
+{"hidden_dim": 128, "ff_dim": 256, "num_heads": 4, "num_layers": 4, "dropout_p": 0.2, "learning_rate": 1e-3, "weight_decay": 0.001}
