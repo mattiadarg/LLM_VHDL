@@ -10,7 +10,7 @@ Il progetto implementa diverse funzionalità avanzate, tra cui:
 - **Architettura Transformer**: Comprende un encoder e un decoder con meccanismi di Multi-Head Attention.
 - **Training e Valutazione**: Supporta il training con funzionalità di early stopping, ottimizzazione di iperparametri e k-fold cross-validation.
 - **Augmentazione Dati**: Generazione di varianti dei dati per migliorare la capacità del modello.
-- **Validazione Sintattica**: Verifica della correttezza sintattica del codice generato con il compilatore GHDL.
+- **Validazione**: Verifica della correttezza del codice generato con il compilatore GHDL.
 
 ## Funzionalità Principali
 
@@ -27,8 +27,17 @@ Il progetto implementa diverse funzionalità avanzate, tra cui:
   - Sinonimi nelle descrizioni testuali.
   - Rinominazione coerente di identificatori nel codice VHDL.
 
-### 4. **Validazione Sintattica**
-- Verifica della sintassi del codice VHDL generato tramite il compilatore GHDL.
+### 4. **Validazione**
+- **Correttezza Sintattica**: Analisi con GHDL per rilevare errori nel codice generato.
+- **Accuratezza Funzionale**: Simulazione tramite testbench specifici.
+- **Sintetizzabilità**: Verifica della trasformazione in netlist hardware.
+
+## Risultati
+- Il modello ha generato codice per diversi problemi chiave (es. Register File, RAM Memory, Debouncing Circuit).
+- Metrica Pass@k:
+  - **Pass@1**: 80% di successo.
+  - **Pass@10**: 100% di successo su tutti i problemi.
+- Sfide riscontrate: difficoltà nella distinzione tra architetture simili, come RAM Memory e Register File, causate da un dataset piccolo e poco diversificato.
 
 ## Prerequisiti
 
@@ -42,3 +51,7 @@ Assicurati di avere installati i seguenti pacchetti e strumenti:
   - `nltk`
   - `selenium`
 - **Compilatore GHDL** per la validazione del codice VHDL.
+
+  ## Autore
+**Mattia d’Argenio**  
+Per ulteriori informazioni o suggerimenti, non esitare a contattarmi.
